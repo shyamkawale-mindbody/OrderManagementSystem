@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Customer
+@{
+    <h1>
+        Create a New Customer
+    </h1>
+
+    <div class="container">
+        <!--POST the Current Form to the Create() method in Controller which is applied with HttpPost attribute-->
+        <form asp-action="Create">
+            <div class="form-group">
+                <label>Customer Id</label>
+                <!--Binding HTML inout element with the 'DeptNo' property from the Model class-->
+                <input type="text" asp-for="CustomerId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Customer Name</label>
+                <input type="text" asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Email-Id</label>
+                <input type="text" asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Mobile No</label>
+                <input type="text" asp-for="MobileNo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Address/label>
+                <input type="text" asp-for="Address" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+            </div>
+        </form>
+
+    </div>
+    <div class="container">
+        <!--Go to Index Action  Method-->
+        <a asp-action="Index">Back to List</a>
+    </div>
+}
